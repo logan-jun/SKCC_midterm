@@ -46,7 +46,8 @@ SELECT r.business_id, b.name, stddev_pop(r.stars) stddev FROM team5_review r JOI
 ## Question 6
 #### Which type of restaurants get good reviews? How about bad reviews?
 ##### a. This will depend on what you consider a good rating. Above 4 star perhaps? You choose.
-```'good review' means restrurant's stars >= 3.5 and tip's likes >= 1
+```
+'good review' means restrurant's stars >= 3.5 and tip's likes >= 1
 Number 1 ranked 'Food' category is skipped because of normality
 ```
 ```sql
