@@ -20,8 +20,10 @@ select * from (select state, count(business_id) as cnt_r from team5_restaurants_
 #### Which are the top 15 subcategories in Restaurants?
 
 ```sql
+select cat_exploded, count(*) as categorie_count from team5_exploded_df where business_id in ( select distinct business_id from team5_restaurants_df ) and cat_exploded != 'Restaurants'  group by cat_exploded order by categorie_count desc limit 15
 ```
-
+![Image of map](/images/num3-2.png)
+![Image of map](/images/num3-1.png)
 
 ## Question 4
 #### What ratings do the majority of restaurants have?
