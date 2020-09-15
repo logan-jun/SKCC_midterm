@@ -20,18 +20,14 @@ select * from (select state, count(business_id) as cnt_r from team5_restaurants_
 #### Which are the top 15 subcategories in Restaurants?
 
 ```sql
-select * from team5_restaurants_df limit 5
 ```
 
-![Image of map](/images/map.png)
 
 ## Question 4
 #### What ratings do the majority of restaurants have?
 
 ```sql
-select * from team5_restaurants_df limit 5
 ```
-![Image of map](/images/map.png)
 
 ## Question 5
 #### What is rating distribution in the restaurant reviews?
@@ -46,15 +42,11 @@ SELECT r.business_id, b.name, stddev_pop(r.stars) stddev FROM team5_review r JOI
 ##### a. This will depend on what you consider a good rating. Above 4 star perhaps? You choose.
 
 ```sql
-select * from team5_restaurants_df limit 5
 ```
-![Image of map](/images/map.png)
 ##### b. Similarly, for bad reviews. What would be considered a bad review?
 
 ```sql
-select * from team5_restaurants_df limit 5
 ```
-![Image of map](/images/map.png)
 
 ## Question 7
 #### Which restaurants have the most reviews?
@@ -68,7 +60,4 @@ select name, review_count from team5_restaurants_df order by review_count desc l
 #### What number of yelp users are elite users? Do they rate differently than non-elite users?
 
 ```sql
-select * from team5_restaurants_df limit 5
 ```
-
-![Image of map](/images/map.png)
