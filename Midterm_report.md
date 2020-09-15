@@ -32,9 +32,9 @@ select * from team5_restaurants_df limit 5
 ## Question 5
 
 ```sql
-select * from team5_restaurants_df limit 5
+SELECT r.business_id, b.name, stddev_pop(r.stars) stddev FROM team5_review r JOIN team5_business b ON (r.business_id = b.business_id)  group by r.business_id, b.name LIMIT 10
 ```
-![Image of map](/images/map.png)
+![Image of map](/images/num5.png)
 
 ## Question 6
 
