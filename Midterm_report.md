@@ -33,6 +33,7 @@ select stars, count(*) from team5_restaurants_df group by stars
 ```
 ![Image of map](/images/num4-1.png)
 ![Image of map](/images/num4-2.png)
+![Image of map](/images/num4-3.png)
 
 ## Question 5
 #### What is rating distribution in the restaurant reviews?
