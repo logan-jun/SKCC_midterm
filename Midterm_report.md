@@ -60,9 +60,9 @@ select * from team5_restaurants_df limit 5
 #### Which restaurants have the most reviews?
 
 ```sql
-select * from team5_restaurants_df limit 5
+select name, review_count from team5_restaurants_df order by review_count desc limit 1
 ```
-![Image of map](/images/map.png)
+![Image of map](/images/num7.png)
 
 ## Question 8
 #### What number of yelp users are elite users? Do they rate differently than non-elite users?
