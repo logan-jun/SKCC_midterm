@@ -2,7 +2,7 @@
 #### Map of restaurants across the United States
 
 ```sql
-select * from team5_restaurants_df limit 5
+select * from team5_restaurants_df
 ```
 
 ![Image of map](/images/map.png)
@@ -46,9 +46,12 @@ SELECT r.business_id, b.name, stddev_pop(r.stars) stddev FROM team5_review r JOI
 ## Question 6
 #### Which type of restaurants get good reviews? How about bad reviews?
 ##### a. This will depend on what you consider a good rating. Above 4 star perhaps? You choose.
-
+```'good review' means restrurant's stars >= 3.5 and tip's likes >= 1```
 ```sql
+select cat_exploded, count(*) from team5_exploded_df where business_id in (select business_id from team5_restaurants_df where stars >= 3.5 ) and business_id in (SELECT business_id FROM team5_tip where likes >= 1 ) and cat_exploded != 'Restaurants' group by cat_exploded order by count(*) desc
 ```
+
+![Image of map](/images/num6-1.png)
 ##### b. Similarly, for bad reviews. What would be considered a bad review?
 
 ```sql
