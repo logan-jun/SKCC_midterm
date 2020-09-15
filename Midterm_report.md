@@ -29,7 +29,10 @@ select cat_exploded, count(*) as categorie_count from team5_exploded_df where bu
 #### What ratings do the majority of restaurants have?
 
 ```sql
+select stars, count(*) from team5_restaurants_df group by stars
 ```
+![Image of map](/images/num4-1.png)
+![Image of map](/images/num4-2.png)
 
 ## Question 5
 #### What is rating distribution in the restaurant reviews?
@@ -59,7 +62,11 @@ select name, review_count from team5_restaurants_df order by review_count desc l
 ![Image of map](/images/num7.png)
 
 ## Question 8
-#### What number of yelp users are elite users? Do they rate differently than non-elite users?
+#### What number of yelp users are elite users?
 
 ```sql
+SELECT count(*) count FROM team5_elite_df where elite_year > 0
 ```
+![Image of map](/images/num8-1.png)
+
+#### Do they rate differently than non-elite users?
